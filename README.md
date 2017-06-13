@@ -2,10 +2,13 @@
 
 ### Table of Contents
  - [Getting started](#getting-started)
- - [Assigment](#asigment)
+ - [Assigment](#assigment)
 
 
 ## Getting started
+To run the app on your machine follow these steps:
+
+```npm i```
 
 ## Assigment 
 You are tasked with building a vote counting and results generating system to run as a web service with a HTTP REST-ful api. There is no requirement to write a front end.
@@ -24,7 +27,7 @@ You have total freedom of implementation but a few things should appear in the f
 - The specific wording of the scenarios steps can be changed to suit your needs, but the overall aim of each should remain
 
 ### Feature: counting votes
-As a BBC television presenter I want to see the counts for candidates within a given time frame so that I can announce the winner of the competition.
+As a television presenter I want to see the counts for candidates within a given time frame so that I can announce the winner of the competition.
 
 **Scenario: Count Me Up accepts a vote**
 
