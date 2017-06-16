@@ -9,6 +9,8 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+mongoose.connect('mongodb://localhost/polling');
+
 // fetching the results
 app
     .get('/api', (req, res) => {
