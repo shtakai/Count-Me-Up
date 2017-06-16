@@ -8,7 +8,9 @@
 ## Getting started
 To run the app on your machine follow these steps:
 
-```npm i```
+Open a terminal in the project repo and run `npm i` to install all dependencies.
+
+To start a server run `node index.js`.
 
 ## Assigment 
 You are tasked with building a vote counting and results generating system to run as a web service with a HTTP REST-ful api. There is no requirement to write a front end.
