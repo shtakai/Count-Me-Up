@@ -35,7 +35,7 @@ async.waterfall([
              console.log('err', err);
              return done(err);
            }
-           console.log('Candidates created: ', candidates);
+           console.log('Candidates created.');
            return done(null);
         });
     },
@@ -59,7 +59,7 @@ async.waterfall([
         }
       ], function(err, users) {
         if (err) return done(err)
-        console.log('Users created: ', users);
+        console.log('Users created.');
         return done(null)
       });
     }

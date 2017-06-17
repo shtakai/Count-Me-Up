@@ -6,11 +6,17 @@
 
 
 ## Getting started
-To run the app on your machine follow these steps:
+*To run the app on your machine follow these steps:*
 
-Open a terminal in the project repo and run `npm i` to install all dependencies.
+Before following the steps bellow, make sure you have Node installed on your machine as well MongoDB. Open a terminal, navigate to project's repo and run command: `mongod`.
 
-To start a server run `node index.js`.
+After that open a new terminal window with the project repo and run the following commands:
+
+```
+npm i    					// installs all dependencies 
+node db/seeds.js 		    // populate database with data
+node index.js				// starts the server
+```
 
 ## Assigment 
 You are tasked with building a vote counting and results generating system to run as a web service with a HTTP REST-ful api. There is no requirement to write a front end.

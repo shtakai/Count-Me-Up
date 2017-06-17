@@ -1,5 +1,7 @@
-const express = require('express');
-const router  = express.Router();
+const express    = require('express');
+const router     = express.Router();
+const users      = require('../controllers/usersController');
+const candidates = require('../controllers/candidatesController');
 
 // router.route('/api/users')
 //     .get()               //user controllers here
@@ -10,8 +12,10 @@ const router  = express.Router();
 //     .get()               // shows the candidates and votes
 
 
-router.route('/users').get((req, res) => {
-  return res.status(200).json({ message: 'success'});
-});
+router.route('/users')
+  .get(users.index)
+  .put(users.update);
+
+router.route('/candidates').get(candidates.index);
 
 module.exports = router;
