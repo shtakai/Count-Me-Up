@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const candidateSchema = mongoose.schema({
+const candidateSchema = mongoose.Schema({
     name: { type: String, trim: true },
     votes: { type: Number }
 });
