@@ -162,6 +162,7 @@ Then I return the correct result
 And the response time is under 1 second
 
 ##Thoughts
+
 ### What I'd like to implement in the future
 
 - tests
