@@ -4,6 +4,7 @@ module.exports = {
 
 const Candidate = require('../models/candidate');
 
+// outputs all the candidates in descending order based on their votes
 function candidatesIndex (req, res) {
     Candidate.find((err, candidates) => {
        if (err) return res.status(500).json({ message: 'Something went wrong.' });

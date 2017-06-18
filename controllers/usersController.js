@@ -8,6 +8,7 @@ const Candidate = require('../models/candidate');
 const mongoose   = require('mongoose');
 mongoose.Promise = Promise;
 
+// outputs all the users
 function usersIndex (req, res) {
     User.find((err, users) => {
        if (err) return res.status(500).json({ message: 'Something went wrong' });
@@ -15,6 +16,8 @@ function usersIndex (req, res) {
     });
 }
 
+// using promises I first find a user and get their votes array and add the newst vote in
+// after, I update the db entry with new array of votes
 function usersUpdate(req, res) {
   User.findOne({username: req.body.username}).exec()
     .then( user => {
@@ -26,12 +29,13 @@ function usersUpdate(req, res) {
     .then(user => {
       User.findOneAndUpdate({ username: user.username }, user, { new: true }, (err, user) => {
           if (err) return res.status(500).json({ message: 'Something went wrong.'});
-          if (user.votes.length > 3) return res.status(403).json({ message: 'Vote not registered. Number of allowed votes exceeded.'});
+          if (user.votes.length > 3) return res.status(403).json({ message: 'Number of allowed votes exceeded.'});
           return res.status(201).json({ message: 'Thank you for your vote.', user});
       });
     });
 }
 
+//  updates the candidate that the user is voting for by incrementing a vote count
 function updateCandidate(req) {
   Candidate.findOne({ name: req.body.votes }, (err, candidate) => {
     candidate.votes++;

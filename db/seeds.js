@@ -5,6 +5,8 @@ const async     = require('async');
 
 mongoose.connect('mongodb://localhost/polling');
 
+// using async to avoid asynch creation
+// not really necessary in this particular case as I hardcoded the number of votes but if we updated candidates with user's votes we'd need candidates to be created first
 async.waterfall([
     function clearCollections(done) {
         User.collection.drop();
