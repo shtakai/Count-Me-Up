@@ -1,7 +1,9 @@
 # Count Me Up
+HTTP REST-ful API build with ***Node.js***
 
 ### Table of Contents
  - [Getting started](#getting-started)
+ - [Using the API](#using-the-api)
  - [Assigment](#assigment)
 
 
@@ -13,9 +15,73 @@ Before following the steps bellow, make sure you have Node installed on your mac
 After that open a new terminal window with the project repo and run the following commands:
 
 ```
-npm i					// installs all dependencies 
+npm i				// installs all dependencies 
 node db/seeds.js		// populate database with data
 node index.js			// starts the server
+```
+
+## Using the API
+The base url for this API is `localhost:3000/api` and below is the list of created enpoints: 
+
+| enpoint          | method | output / input        |
+|------------------|--------|-----------------------|
+| /users           | GET    | see `GET /users  `    |
+| /users           | PUT    | see `PUT /users `     |
+| /candidates      | GET    | see `GET /candidates `|
+
+
+### GET `/users`
+After sending `GET` request to `http://localhost:3000/api/users`, you will receive an array of user objects containing their username and array of previous votes. If they haven't voted yet, the array is empty.
+
+``` javascript
+[{
+		"_id": "59463eb71efc8b5a809e3015",
+		"username": "A",
+		"__v": 0,
+		"votes": []
+},{
+		"_id": "59463eb71efc8b5a809e3016",
+		"username": "B",
+		"__v": 0,
+		"votes": ["A", "A"]
+},...]
+```
+
+### PUT `/users`
+This enpoint registers a vote and updates both user and candidate that user voted for. The input is an object with user's `username` and `votes` with is the candidate's name.
+
+| property | type   | info             | 
+|----------|--------|------------------|
+| username | String | username 		   |  
+| votes    | String | candidate's name |   
+
+Example:
+
+``` javascript
+// `PUT` request to `localhost:3000/api/users`
+{
+	"username" : "A",
+	"votes": "B"
+}
+
+```
+### GET `/candidates`
+The results of the voting - outputs the array of candidates in descending order based on votes received. The example of output:
+
+``` javascript
+[{
+	"candidate": "A",
+	"votes": 4
+},{
+	"candidate": "B",
+	"votes": 2
+},{
+	"candidate": "C",
+	"votes": 1
+},{
+	"candidate": "D",
+	"votes": 0
+}]
 ```
 
 ## Assigment 
