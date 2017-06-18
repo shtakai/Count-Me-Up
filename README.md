@@ -13,9 +13,9 @@ Before following the steps bellow, make sure you have Node installed on your mac
 After that open a new terminal window with the project repo and run the following commands:
 
 ```
-npm i    					// installs all dependencies 
-node db/seeds.js 		    // populate database with data
-node index.js				// starts the server
+npm i					// installs all dependencies 
+node db/seeds.js		// populate database with data
+node index.js			// starts the server
 ```
 
 ## Assigment 

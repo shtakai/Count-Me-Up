@@ -22,5 +22,3 @@ function sortCandidates(candidates) {
     return one.votes < two.votes;
   });
 }
-
-// index function outputs all the candidates and their votes based on their votes
