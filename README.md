@@ -5,7 +5,7 @@ HTTP REST-ful API build with ***Node.js***
  - [Getting started](#getting-started)
  - [Using the API](#using-the-api)
  - [Assigment](#assigment)
-
+ - [Thoughts](#thoughts)
 
 ## Getting started
 *To run the app on your machine follow these steps:*
@@ -85,6 +85,7 @@ The results of the voting - outputs the array of candidates in descending order 
 ```
 
 ## Assigment
+
 You are tasked with building a vote counting and results generating system to run as a web service with a HTTP REST-ful api. There is no requirement to write a front end.
 
 ### Assumptions:
@@ -159,3 +160,9 @@ When I receive a request for the overall result
 Then I return the correct result
 
 And the response time is under 1 second
+
+##Thoughts
+### What I'd like to implement in the future
+
+- tests
+- improve error handling
