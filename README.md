@@ -15,13 +15,13 @@ Before following the steps bellow, make sure you have Node installed on your mac
 After that open a new terminal window with the project repo and run the following commands:
 
 ```
-npm i				// installs all dependencies 
-node db/seeds.js		// populate database with data
-node index.js			// starts the server
+npm i  // installs all dependencies
+node db/seeds.js  // populate database with data
+node index.js  // starts the server
 ```
 
 ## Using the API
-The base url for this API is `localhost:3000/api` and below is the list of created enpoints: 
+The base url for this API is `localhost:3000/api` and below is the list of created enpoints:
 
 | enpoint          | method | output / input        |
 |------------------|--------|-----------------------|
@@ -50,7 +50,7 @@ After sending `GET` request to `http://localhost:3000/api/users`, you will recei
 ### PUT `/users`
 This enpoint registers a vote and updates both user and candidate that user voted for. The input is an object with user's `username` and `votes` with is the candidate's name.
 
-| property | type   | info             | 
+| property | type   | info             |
 |----------|--------|------------------|
 | username | String | username 		   |  
 | votes    | String | candidate's name |   
@@ -84,7 +84,7 @@ The results of the voting - outputs the array of candidates in descending order 
 }]
 ```
 
-## Assigment 
+## Assigment
 You are tasked with building a vote counting and results generating system to run as a web service with a HTTP REST-ful api. There is no requirement to write a front end.
 
 ### Assumptions:
