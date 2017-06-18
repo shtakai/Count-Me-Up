@@ -161,7 +161,7 @@ Then I return the correct result
 
 And the response time is under 1 second
 
-##Thoughts
+## Thoughts
 
 ### What I'd like to implement in the future
 
