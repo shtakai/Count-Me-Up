@@ -10,7 +10,7 @@ HTTP REST-ful API build with ***Node.js***
 ## Getting started
 *To run the app on your machine follow these steps:*
 
-Before following the steps bellow, make sure you have Node installed on your machine as well MongoDB. Open a terminal, navigate to project's repo and run command: `mongod`.
+Before following the steps bellow, make sure you have Node installed on your machine as well MongoDB and that MongoDB is running.
 
 After that open a new terminal window with the project repo and run the following commands:
 
