@@ -1,4 +1,7 @@
 # Count Me Up
+
+[![GuardRails badge](https://badges.production.guardrails.io/shtakai/Count-Me-Up.svg)](https://www.guardrails.io)
+
 HTTP REST-ful API build with ***Node.js***
 
 ### Table of Contents
